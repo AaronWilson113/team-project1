@@ -1,8 +1,8 @@
 var listItems = document.getElementById("list");
-
+var apiKey = "78864f41cea947c889abb37111d67773"
 function getFirstItem() {
 
-    var requestString = "https://api.spoonacular.com/food/products/search?query=tomatoe&number=20&apiKey=87bd7010d4a5438794178908bda2a69e"
+    var requestString = "https://api.spoonacular.com/food/products/search?query=tomatoe&number=20&apiKey=78864f41cea947c889abb37111d67773"
 
     fetch(requestString)
     .then(function (response) {
@@ -17,7 +17,7 @@ function getFirstItem() {
 
 function getSecondItem() {
 
-    var requestString = "https://api.spoonacular.com/food/products/search?query=apples&number=20&apiKey=87bd7010d4a5438794178908bda2a69e"
+    var requestString = "https://api.spoonacular.com/food/products/search?query=apples&number=20&apiKey=78864f41cea947c889abb37111d67773"
 
     fetch(requestString)
     .then(function (response) {
@@ -32,7 +32,7 @@ function getSecondItem() {
 
 function getThirdItem() {
 
-    var requestString = "https://api.spoonacular.com/food/products/search?query=trailmix&number=20&apiKey=87bd7010d4a5438794178908bda2a69e"
+    var requestString = "https://api.spoonacular.com/food/products/search?query=trailmix&number=20&apiKey=78864f41cea947c889abb37111d67773"
 
     fetch(requestString)
     .then(function (response) {
@@ -47,7 +47,7 @@ function getThirdItem() {
 
 function getFourthItem() {
 
-    var requestString = "https://api.spoonacular.com/food/products/search?query=salsa&number=20&apiKey=87bd7010d4a5438794178908bda2a69e"
+    var requestString = "https://api.spoonacular.com/food/products/search?query=salsa&number=20&apiKey=78864f41cea947c889abb37111d67773"
 
     fetch(requestString)
     .then(function (response) {
@@ -62,7 +62,7 @@ function getFourthItem() {
 
 function getFifthItem() {
 
-    var requestString = "https://api.spoonacular.com/food/products/search?query=eggs&number=40&apiKey=87bd7010d4a5438794178908bda2a69e"
+    var requestString = "https://api.spoonacular.com/food/products/search?query=eggs&number=40&apiKey=78864f41cea947c889abb37111d67773"
 
     fetch(requestString)
     .then(function (response) {
@@ -77,7 +77,7 @@ function getFifthItem() {
 
 function getSixthItem() {
 
-    var requestString = "https://api.spoonacular.com/food/products/search?query=steak&number=40&apiKey=87bd7010d4a5438794178908bda2a69e"
+    var requestString = "https://api.spoonacular.com/food/products/search?query=soup&number=40&apiKey=78864f41cea947c889abb37111d67773"
 
     fetch(requestString)
     .then(function (response) {
@@ -89,7 +89,7 @@ function getSixthItem() {
             console.log(data.products[i].title)
         }
         var foodItem1 = document.createElement("h3");
-        foodItem1.textContent = data.products[7].title;
+        foodItem1.textContent = data.products[37].title;
         listItems.append(foodItem1);  
     })
 }
