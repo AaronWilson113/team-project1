@@ -1,7 +1,14 @@
+*{
+    padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px; 
+}
+
 .header {
     padding: 60px;
     text-align: center;
-    background: #1abc9c;
+    background: #5be4e1;
     color: white;
     font-size: 30px;
-  }
+    }
