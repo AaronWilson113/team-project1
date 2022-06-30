@@ -1,5 +1,7 @@
 var listItems = document.getElementById("list");
-var apiKey = "78864f41cea947c889abb37111d67773"
+var apiKey = "78864f41cea947c889abb37111d67773";
+
+
 function getFirstItem() {
 
     var requestString = "https://api.spoonacular.com/food/products/search?query=tomatoe&number=20&apiKey=78864f41cea947c889abb37111d67773"
