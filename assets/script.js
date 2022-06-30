@@ -1,7 +1,5 @@
 var listItems = document.getElementById("list");
-var apiKey = "78864f41cea947c889abb37111d67773";
-
-
+var apiKey = "78864f41cea947c889abb37111d67773"
 function getFirstItem() {
 
     var requestString = "https://api.spoonacular.com/food/products/search?query=tomatoe&number=20&apiKey=78864f41cea947c889abb37111d67773"
@@ -95,9 +93,99 @@ function getSixthItem() {
         listItems.append(foodItem1);  
     })
 }
+
+function getTomatoData(){
+    var foodDataApi = "https://api.nal.usda.gov/fdc/v1/foods?fdcIds=1103276&api_key=XFPwxrCBhyPpLKYcOMBeL1x6bvAgVxL9GeTMaxfM"
+        fetch(foodDataApi)
+      .then(function (response) {
+          return response.json();
+        })
+        .then(function (data) {
+          console.log(data);
+          for (var i = 0; i < data[0].foodNutrients.length; i++){
+            console.log("Tomato Nutrients: " + data[0].foodNutrients[i].nutrient.name + ': ' + data[0].foodNutrients[i].amount)
+          }
+        });
+  }
+
+  function getAppleData(){
+    var foodDataApi = "https://api.nal.usda.gov/fdc/v1/foods?fdcIds=1102644&api_key=XFPwxrCBhyPpLKYcOMBeL1x6bvAgVxL9GeTMaxfM"
+        fetch(foodDataApi)
+      .then(function (response) {
+          return response.json();
+        })
+        .then(function (data) {
+          console.log(data);
+          for (var i = 0; i < data[0].foodNutrients.length; i++){
+            console.log("Apple Nutrients: " + data[0].foodNutrients[i].nutrient.name + ': ' + data[0].foodNutrients[i].amount)
+          }
+        });
+  }
+
+  function getJumboEggData(){
+    var foodDataApi = "https://api.nal.usda.gov/fdc/v1/foods?fdcIds=1663010&api_key=XFPwxrCBhyPpLKYcOMBeL1x6bvAgVxL9GeTMaxfM"
+        fetch(foodDataApi)
+      .then(function (response) {
+          return response.json();
+        })
+        .then(function (data) {
+          console.log(data);
+          for (var i = 0; i < data[0].foodNutrients.length; i++){
+            console.log("Jumbo Brown Egg Nutrients: " + data[0].foodNutrients[i].nutrient.name + ': ' + data[0].foodNutrients[i].amount)
+          }
+        });
+  }
+  function getCraisinData(){
+    var foodDataApi = "https://api.nal.usda.gov/fdc/v1/foods?fdcIds=1919941&api_key=XFPwxrCBhyPpLKYcOMBeL1x6bvAgVxL9GeTMaxfM"
+        fetch(foodDataApi)
+      .then(function (response) {
+          return response.json();
+        })
+        .then(function (data) {
+          console.log(data);
+          for (var i = 0; i < data[0].foodNutrients.length; i++){
+            console.log("Craisin Trailmix Nutrients: " + data[0].foodNutrients[i].nutrient.name + ': ' + data[0].foodNutrients[i].amount)
+          }
+        });
+  }
+  function getChiliData(){
+    var foodDataApi = "https://api.nal.usda.gov/fdc/v1/foods?fdcIds=1913808&api_key=XFPwxrCBhyPpLKYcOMBeL1x6bvAgVxL9GeTMaxfM"
+        fetch(foodDataApi)
+      .then(function (response) {
+          return response.json();
+        })
+        .then(function (data) {
+          console.log(data);
+          for (var i = 0; i < data[0].foodNutrients.length; i++){
+            console.log('Chili Mix Nutrients: ' + data[0].foodNutrients[i].nutrient.name + ': ' + data[0].foodNutrients[i].amount)
+          }
+        });
+  }
+  function getSalsaData(){
+    var foodDataApi = "https://api.nal.usda.gov/fdc/v1/foods?fdcIds=1855206&api_key=XFPwxrCBhyPpLKYcOMBeL1x6bvAgVxL9GeTMaxfM"
+        fetch(foodDataApi)
+      .then(function (response) {
+          return response.json();
+        })
+        .then(function (data) {
+          console.log(data);
+          for (var i = 0; i < data[0].foodNutrients.length; i++){
+            console.log("Amy's Salsa Nutrients: " + data[0].foodNutrients[i].nutrient.name + ': ' + data[0].foodNutrients[i].amount)
+          }
+        });
+  }
+
+
+  
 getFirstItem();
 getSecondItem();
 getThirdItem();
 getFourthItem();
 getFifthItem();
 getSixthItem();
+getTomatoData();
+getAppleData();
+getJumboEggData();
+getCraisinData();
+getChiliData();
+getSalsaData();
