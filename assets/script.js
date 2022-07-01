@@ -1,8 +1,9 @@
 var listItems = document.getElementById("list");
 var apiKey = "78864f41cea947c889abb37111d67773"
+var input = $('#NutritionalFacts')
 function getFirstItem() {
 
-    var requestString = "https://api.spoonacular.com/food/products/search?query=tomatoe&number=20&apiKey=78864f41cea947c889abb37111d67773"
+    var requestString = "https://api.spoonacular.com/food/products/search?query=tomatoe&number=20&apiKey=5f98d4bec4884e4aaefb1ad9c736d947"
 
     fetch(requestString)
     .then(function (response) {
@@ -17,7 +18,7 @@ function getFirstItem() {
 
 function getSecondItem() {
 
-    var requestString = "https://api.spoonacular.com/food/products/search?query=apples&number=20&apiKey=78864f41cea947c889abb37111d67773"
+    var requestString = "https://api.spoonacular.com/food/products/search?query=apples&number=20&apiKey=5f98d4bec4884e4aaefb1ad9c736d947"
 
     fetch(requestString)
     .then(function (response) {
@@ -32,7 +33,7 @@ function getSecondItem() {
 
 function getThirdItem() {
 
-    var requestString = "https://api.spoonacular.com/food/products/search?query=trailmix&number=20&apiKey=78864f41cea947c889abb37111d67773"
+    var requestString = "https://api.spoonacular.com/food/products/search?query=trailmix&number=20&apiKey=5f98d4bec4884e4aaefb1ad9c736d947"
 
     fetch(requestString)
     .then(function (response) {
@@ -47,7 +48,7 @@ function getThirdItem() {
 
 function getFourthItem() {
 
-    var requestString = "https://api.spoonacular.com/food/products/search?query=salsa&number=20&apiKey=78864f41cea947c889abb37111d67773"
+    var requestString = "https://api.spoonacular.com/food/products/search?query=salsa&number=20&apiKey=5f98d4bec4884e4aaefb1ad9c736d947"
 
     fetch(requestString)
     .then(function (response) {
@@ -62,7 +63,7 @@ function getFourthItem() {
 
 function getFifthItem() {
 
-    var requestString = "https://api.spoonacular.com/food/products/search?query=eggs&number=40&apiKey=78864f41cea947c889abb37111d67773"
+    var requestString = "https://api.spoonacular.com/food/products/search?query=eggs&number=40&apiKey=5f98d4bec4884e4aaefb1ad9c736d947"
 
     fetch(requestString)
     .then(function (response) {
@@ -77,7 +78,7 @@ function getFifthItem() {
 
 function getSixthItem() {
 
-    var requestString = "https://api.spoonacular.com/food/products/search?query=soup&number=40&apiKey=78864f41cea947c889abb37111d67773"
+    var requestString = "https://api.spoonacular.com/food/products/search?query=soup&number=40&apiKey=5f98d4bec4884e4aaefb1ad9c736d947"
 
     fetch(requestString)
     .then(function (response) {
@@ -102,8 +103,14 @@ function getTomatoData(){
         })
         .then(function (data) {
           console.log(data);
-          for (var i = 0; i < data[0].foodNutrients.length; i++){
-            console.log("Tomato Nutrients: " + data[0].foodNutrients[i].nutrient.name + ': ' + data[0].foodNutrients[i].amount)
+          for (var i = 0; i < 10; i++){
+            console.log("Tomato Nutrients: " + data[0].foodNutrients[i].nutrient.name + ': ' + data[0].foodNutrients[i].amount + data[0].foodNutrients[i].nutrient.unitName)
+            
+            if(data[0].foodNutrients[i].amount !== undefined){
+            var nutrientItem1 = document.createElement("h3");
+            nutrientItem1.textContent = data[0].foodNutrients[i].nutrient.name + ': ' + data[0].foodNutrients[i].amount + data[0].foodNutrients[i].nutrient.unitName
+            input.append(nutrientItem1)
+          }
           }
         });
   }
@@ -116,8 +123,9 @@ function getTomatoData(){
         })
         .then(function (data) {
           console.log(data);
-          for (var i = 0; i < data[0].foodNutrients.length; i++){
-            console.log("Apple Nutrients: " + data[0].foodNutrients[i].nutrient.name + ': ' + data[0].foodNutrients[i].amount)
+
+          for (var i = 0; i < 10; i++){
+            console.log("Apple Nutrients: " + data[0].foodNutrients[i].nutrient.name + ': ' + data[0].foodNutrients[i].amount + data[0].foodNutrients[i].nutrient.unitName)
           }
         });
   }
@@ -130,8 +138,8 @@ function getTomatoData(){
         })
         .then(function (data) {
           console.log(data);
-          for (var i = 0; i < data[0].foodNutrients.length; i++){
-            console.log("Jumbo Brown Egg Nutrients: " + data[0].foodNutrients[i].nutrient.name + ': ' + data[0].foodNutrients[i].amount)
+          for (var i = 0; i < 10; i++){
+            console.log("Jumbo Brown Egg Nutrients: " + data[0].foodNutrients[i].nutrient.name + ': ' + data[0].foodNutrients[i].amount + data[0].foodNutrients[i].nutrient.unitName)
           }
         });
   }
@@ -143,8 +151,8 @@ function getTomatoData(){
         })
         .then(function (data) {
           console.log(data);
-          for (var i = 0; i < data[0].foodNutrients.length; i++){
-            console.log("Craisin Trailmix Nutrients: " + data[0].foodNutrients[i].nutrient.name + ': ' + data[0].foodNutrients[i].amount)
+          for (var i = 0; i < 10; i++){
+            console.log("Craisin Trailmix Nutrients: " + data[0].foodNutrients[i].nutrient.name + ': ' + data[0].foodNutrients[i].amount + data[0].foodNutrients[i].nutrient.unitName)
           }
         });
   }
@@ -156,8 +164,8 @@ function getTomatoData(){
         })
         .then(function (data) {
           console.log(data);
-          for (var i = 0; i < data[0].foodNutrients.length; i++){
-            console.log('Chili Mix Nutrients: ' + data[0].foodNutrients[i].nutrient.name + ': ' + data[0].foodNutrients[i].amount)
+          for (var i = 0; i < 10; i++){
+            console.log('Chili Mix Nutrients: ' + data[0].foodNutrients[i].nutrient.name + ': ' + data[0].foodNutrients[i].amount + data[0].foodNutrients[i].nutrient.unitName)
           }
         });
   }
@@ -169,8 +177,8 @@ function getTomatoData(){
         })
         .then(function (data) {
           console.log(data);
-          for (var i = 0; i < data[0].foodNutrients.length; i++){
-            console.log("Amy's Salsa Nutrients: " + data[0].foodNutrients[i].nutrient.name + ': ' + data[0].foodNutrients[i].amount)
+          for (var i = 0; i < 10; i++){
+            console.log("Amy's Salsa Nutrients: " + data[0].foodNutrients[i].nutrient.name + ': ' + data[0].foodNutrients[i].amount + data[0].foodNutrients[i].nutrient.unitName)
           }
         });
   }
