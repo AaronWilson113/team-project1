@@ -1,4 +1,6 @@
 var listItems = document.getElementById("list");
+var input = document.getElementById("input");
+var apiKey = "5f98d4bec4884e4aaefb1ad9c736d947"
 var apiKey = "78864f41cea947c889abb37111d67773"
 var input = $('#NutritionalFacts')
 function getFirstItem() {
