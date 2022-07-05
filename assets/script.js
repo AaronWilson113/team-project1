@@ -135,6 +135,12 @@ function getTomatoData(){
 
           for (var i = 0; i < 10; i++){
             console.log("Apple Nutrients: " + data[0].foodNutrients[i].nutrient.name + ': ' + data[0].foodNutrients[i].amount + data[0].foodNutrients[i].nutrient.unitName)
+
+            if(data[0].foodNutrients[i].amount !== undefined){
+              var nutrientItem1 = document.createElement("h3");
+              nutrientItem1.textContent = data[0].foodNutrients[i].nutrient.name + ': ' + data[0].foodNutrients[i].amount + data[0].foodNutrients[i].nutrient.unitName
+              input.append(nutrientItem1)
+            }
           }
         });
   }
@@ -149,6 +155,12 @@ function getTomatoData(){
           console.log(data);
           for (var i = 0; i < 10; i++){
             console.log("Jumbo Brown Egg Nutrients: " + data[0].foodNutrients[i].nutrient.name + ': ' + data[0].foodNutrients[i].amount + data[0].foodNutrients[i].nutrient.unitName)
+
+            if(data[0].foodNutrients[i].amount !== undefined){
+              var nutrientItem1 = document.createElement("h3");
+              nutrientItem1.textContent = data[0].foodNutrients[i].nutrient.name + ': ' + data[0].foodNutrients[i].amount + data[0].foodNutrients[i].nutrient.unitName
+              input.append(nutrientItem1)
+            }
           }
         });
   }
@@ -162,6 +174,12 @@ function getTomatoData(){
           console.log(data);
           for (var i = 0; i < 10; i++){
             console.log("Craisin Trailmix Nutrients: " + data[0].foodNutrients[i].nutrient.name + ': ' + data[0].foodNutrients[i].amount + data[0].foodNutrients[i].nutrient.unitName)
+
+            if(data[0].foodNutrients[i].amount !== undefined){
+              var nutrientItem1 = document.createElement("h3");
+              nutrientItem1.textContent = data[0].foodNutrients[i].nutrient.name + ': ' + data[0].foodNutrients[i].amount + data[0].foodNutrients[i].nutrient.unitName
+              input.append(nutrientItem1)
+            }
           }
         });
   }
@@ -175,6 +193,12 @@ function getTomatoData(){
           console.log(data);
           for (var i = 0; i < 10; i++){
             console.log('Chili Mix Nutrients: ' + data[0].foodNutrients[i].nutrient.name + ': ' + data[0].foodNutrients[i].amount + data[0].foodNutrients[i].nutrient.unitName)
+
+            if(data[0].foodNutrients[i].amount !== undefined){
+              var nutrientItem1 = document.createElement("h3");
+              nutrientItem1.textContent = data[0].foodNutrients[i].nutrient.name + ': ' + data[0].foodNutrients[i].amount + data[0].foodNutrients[i].nutrient.unitName
+              input.append(nutrientItem1)
+            }
           }
         });
   }
@@ -188,11 +212,51 @@ function getTomatoData(){
           console.log(data);
           for (var i = 0; i < 10; i++){
             console.log("Amy's Salsa Nutrients: " + data[0].foodNutrients[i].nutrient.name + ': ' + data[0].foodNutrients[i].amount + data[0].foodNutrients[i].nutrient.unitName)
+
+            if(data[0].foodNutrients[i].amount !== undefined){
+              var nutrientItem1 = document.createElement("h3");
+              nutrientItem1.textContent = data[0].foodNutrients[i].nutrient.name + ': ' + data[0].foodNutrients[i].amount + data[0].foodNutrients[i].nutrient.unitName
+              input.append(nutrientItem1)
+            }
           }
         });
   }
 
+groceryItem1.addEventListener("click" , function(){
 
+getTomatoData();
+
+})
+
+groceryItem2.addEventListener("click" , function(){
+
+  getAppleData();
+
+})
+
+groceryItem3.addEventListener("click" , function(){
+
+  getJumboEggData();
+
+})
+
+groceryItem4.addEventListener("click" , function(){
+
+  getCraisinData();
+
+})
+
+groceryItem5.addEventListener("click" , function(){
+
+  getChiliData();
+
+})
+
+groceryItem6.addEventListener("click" , function(){
+
+  getSalsaData();
+
+})
   
 getFirstItem();
 getSecondItem();
@@ -200,8 +264,7 @@ getThirdItem();
 getFourthItem();
 getFifthItem();
 getSixthItem();
-getTomatoData();
-getAppleData();
+
 getJumboEggData();
 getCraisinData();
 getChiliData();
