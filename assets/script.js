@@ -1,8 +1,8 @@
 var listItems = document.getElementById("list");
 var input = document.getElementById("input");
-var apiKey = "75965954505c49e382e8238b351fd803";
+var apiKey = "68dc663027be4c41aa983edad19d1700";
 var apiKey = "78864f41cea947c889abb37111d67773";
-var input = $('#NutritionalFacts');
+var input2 = $('#NutritionalFacts');
 var groceryItem1 = document.getElementById("fooditem1");
 var groceryItem2 = document.getElementById("fooditem2");
 var groceryItem3 = document.getElementById("fooditem3");
@@ -10,9 +10,11 @@ var groceryItem4 = document.getElementById("fooditem4");
 var groceryItem5 = document.getElementById("fooditem5");
 var groceryItem6 = document.getElementById("fooditem6");
 
+
+
 function getFirstItem() {
 
-    var requestString = "https://api.spoonacular.com/food/products/search?query=tomatoe&number=20&apiKey=75965954505c49e382e8238b351fd803"
+    var requestString = "https://api.spoonacular.com/food/products/search?query=tomatoe&number=20&apiKey=68dc663027be4c41aa983edad19d1700";
 
     fetch(requestString)
     .then(function (response) {
@@ -27,7 +29,7 @@ function getFirstItem() {
 
 function getSecondItem() {
 
-    var requestString = "https://api.spoonacular.com/food/products/search?query=apples&number=20&apiKey=75965954505c49e382e8238b351fd803"
+    var requestString = "https://api.spoonacular.com/food/products/search?query=apples&number=20&apiKey=68dc663027be4c41aa983edad19d1700";
 
     fetch(requestString)
     .then(function (response) {
@@ -42,7 +44,7 @@ function getSecondItem() {
 
 function getThirdItem() {
 
-    var requestString = "https://api.spoonacular.com/food/products/search?query=trailmix&number=20&apiKey=75965954505c49e382e8238b351fd803"
+    var requestString = "https://api.spoonacular.com/food/products/search?query=trailmix&number=20&apiKey=68dc663027be4c41aa983edad19d1700";
 
     fetch(requestString)
     .then(function (response) {
@@ -57,7 +59,7 @@ function getThirdItem() {
 
 function getFourthItem() {
 
-    var requestString = "https://api.spoonacular.com/food/products/search?query=salsa&number=20&apiKey=75965954505c49e382e8238b351fd803"
+    var requestString = "https://api.spoonacular.com/food/products/search?query=salsa&number=20&apiKey=68dc663027be4c41aa983edad19d1700";
 
     fetch(requestString)
     .then(function (response) {
@@ -72,7 +74,7 @@ function getFourthItem() {
 
 function getFifthItem() {
 
-    var requestString = "https://api.spoonacular.com/food/products/search?query=eggs&number=40&apiKey=75965954505c49e382e8238b351fd803"
+    var requestString = "https://api.spoonacular.com/food/products/search?query=eggs&number=40&apiKey=68dc663027be4c41aa983edad19d1700";
 
     fetch(requestString)
     .then(function (response) {
@@ -87,7 +89,7 @@ function getFifthItem() {
 
 function getSixthItem() {
 
-    var requestString = "https://api.spoonacular.com/food/products/search?query=soup&number=40&apiKey=75965954505c49e382e8238b351fd803"
+    var requestString = "https://api.spoonacular.com/food/products/search?query=soup&number=40&apiKey=68dc663027be4c41aa983edad19d1700";
 
     fetch(requestString)
     .then(function (response) {
@@ -105,6 +107,8 @@ function getSixthItem() {
 }
 
 function getTomatoData(){
+
+  input2.html("")
     var foodDataApi = "https://api.nal.usda.gov/fdc/v1/foods?fdcIds=1103276&api_key=XFPwxrCBhyPpLKYcOMBeL1x6bvAgVxL9GeTMaxfM"
         fetch(foodDataApi)
       .then(function (response) {
@@ -118,13 +122,17 @@ function getTomatoData(){
             if(data[0].foodNutrients[i].amount !== undefined){
             var nutrientItem1 = document.createElement("h3");
             nutrientItem1.textContent = data[0].foodNutrients[i].nutrient.name + ': ' + data[0].foodNutrients[i].amount + data[0].foodNutrients[i].nutrient.unitName
-            input.append(nutrientItem1)
+            input2.append(nutrientItem1)
+
+
+          
           }
           }
         });
   }
 
   function getAppleData(){
+    input2.html("")
     var foodDataApi = "https://api.nal.usda.gov/fdc/v1/foods?fdcIds=1102644&api_key=XFPwxrCBhyPpLKYcOMBeL1x6bvAgVxL9GeTMaxfM"
         fetch(foodDataApi)
       .then(function (response) {
@@ -139,13 +147,15 @@ function getTomatoData(){
             if(data[0].foodNutrients[i].amount !== undefined){
               var nutrientItem1 = document.createElement("h3");
               nutrientItem1.textContent = data[0].foodNutrients[i].nutrient.name + ': ' + data[0].foodNutrients[i].amount + data[0].foodNutrients[i].nutrient.unitName
-              input.append(nutrientItem1)
+              input2.append(nutrientItem1)
+            
             }
           }
         });
   }
 
   function getJumboEggData(){
+    input2.html("")
     var foodDataApi = "https://api.nal.usda.gov/fdc/v1/foods?fdcIds=1663010&api_key=XFPwxrCBhyPpLKYcOMBeL1x6bvAgVxL9GeTMaxfM"
         fetch(foodDataApi)
       .then(function (response) {
@@ -159,12 +169,14 @@ function getTomatoData(){
             if(data[0].foodNutrients[i].amount !== undefined){
               var nutrientItem1 = document.createElement("h3");
               nutrientItem1.textContent = data[0].foodNutrients[i].nutrient.name + ': ' + data[0].foodNutrients[i].amount + data[0].foodNutrients[i].nutrient.unitName
-              input.append(nutrientItem1)
+              input2.append(nutrientItem1)
+            
             }
           }
         });
   }
   function getCraisinData(){
+    input2.html("")
     var foodDataApi = "https://api.nal.usda.gov/fdc/v1/foods?fdcIds=1919941&api_key=XFPwxrCBhyPpLKYcOMBeL1x6bvAgVxL9GeTMaxfM"
         fetch(foodDataApi)
       .then(function (response) {
@@ -178,12 +190,14 @@ function getTomatoData(){
             if(data[0].foodNutrients[i].amount !== undefined){
               var nutrientItem1 = document.createElement("h3");
               nutrientItem1.textContent = data[0].foodNutrients[i].nutrient.name + ': ' + data[0].foodNutrients[i].amount + data[0].foodNutrients[i].nutrient.unitName
-              input.append(nutrientItem1)
+              input2.append(nutrientItem1)
+            
             }
           }
         });
   }
   function getChiliData(){
+    input2.html("")
     var foodDataApi = "https://api.nal.usda.gov/fdc/v1/foods?fdcIds=1913808&api_key=XFPwxrCBhyPpLKYcOMBeL1x6bvAgVxL9GeTMaxfM"
         fetch(foodDataApi)
       .then(function (response) {
@@ -197,12 +211,14 @@ function getTomatoData(){
             if(data[0].foodNutrients[i].amount !== undefined){
               var nutrientItem1 = document.createElement("h3");
               nutrientItem1.textContent = data[0].foodNutrients[i].nutrient.name + ': ' + data[0].foodNutrients[i].amount + data[0].foodNutrients[i].nutrient.unitName
-              input.append(nutrientItem1)
+              input2.append(nutrientItem1)
+            
             }
           }
         });
   }
   function getSalsaData(){
+    input2.html("")
     var foodDataApi = "https://api.nal.usda.gov/fdc/v1/foods?fdcIds=1855206&api_key=XFPwxrCBhyPpLKYcOMBeL1x6bvAgVxL9GeTMaxfM"
         fetch(foodDataApi)
       .then(function (response) {
@@ -216,7 +232,8 @@ function getTomatoData(){
             if(data[0].foodNutrients[i].amount !== undefined){
               var nutrientItem1 = document.createElement("h3");
               nutrientItem1.textContent = data[0].foodNutrients[i].nutrient.name + ': ' + data[0].foodNutrients[i].amount + data[0].foodNutrients[i].nutrient.unitName
-              input.append(nutrientItem1)
+              input2.append(nutrientItem1)
+            
             }
           }
         });
@@ -265,7 +282,4 @@ getFourthItem();
 getFifthItem();
 getSixthItem();
 
-getJumboEggData();
-getCraisinData();
-getChiliData();
-getSalsaData();
+
