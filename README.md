@@ -10,6 +10,8 @@ At Home Nutrition is an application designed to aid the average food eater in de
 
 ### Screen shot of deployed Application
 
-### Gif of Deployed Application
+![image](https://user-images.githubusercontent.com/105234776/177854519-6ec89eca-87f0-4150-bbc9-8a4c06bb8425.png)
 
 ### Link to deployed Application
+
+https://aaronwilson113.github.io/team-project1/
